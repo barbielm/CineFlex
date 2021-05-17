@@ -5,7 +5,7 @@ export default function Movie(props){
     const {id, title, posterURL, overview, releaseDate} = movie
     return(
         <li class="movie">
-            <Link to={`/sessoes/:${id}`}>
+            <Link to={`/sessoes/${id}`}>
                 <img src={posterURL}/>
             </Link>
         </li>

@@ -108,8 +108,141 @@ body{
     margin-right: 15px;
 }
 
+
+.seats{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 67px;
+    margin-bottom: 200px;
+    padding-left: 20px;
+    padding-right: 10px;
+    justify-content: space-around;
+    margin-bottom: 150px;
+}
+
+.seat{
+    width: 26px;
+    height: 26px;
+    border: 1px solid #808F9D;
+    box-sizing: border-box;
+    border-radius: 50%;
+    font-size: 11px;
+    line-height: 13px;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+}
+
+.available{
+    background-color: #C3CFD9;
+}
+.unavailable{
+    background-color: #8DD7CF;
+}
+.selected{
+    background-color: #FBE192;
+}
+
+.seats .title{
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #293845;   
+}
+
+.subtitles{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.subtitles .subtitle{
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.buyer{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.buyer .title{
+    height: 25px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #293845;
+    justify-content: flex-start;
+    
+}
+.buyer input{
+    max-width: 100%;
+    height: 51px;
+    background: #FFFFFF;
+    border: 1px solid #D5D5D5;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+.identification{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.identification .title{
+    height: 25px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #293845;
+    justify-content: flex-start;
+}
+.identification input{
+    max-width: 100%;
+    height: 51px;
+    background: #FFFFFF;
+    border: 1px solid #D5D5D5;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+input::placeholder{
+    font-style: italic;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color:#AFAFAF;
+    padding: 10px;
+}
+.reserv-seat{
+    width: 225px;
+    height: 42px;
+    background: #E8833A;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 30px;
+}
+
 .footer{
-    height: 120px;
+    height: 100px;
     width: 100%;
     background: #DFE6ED;
     border: 1px solid #9EADBA;
@@ -125,8 +258,11 @@ body{
     background-color: #FFFFFF;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 2px;
-    padding: 8px;
+    padding: 5px;
     margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
 }
 .footer .poster img{
@@ -141,4 +277,88 @@ body{
     color:#293845;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+}
+
+.footer-seats{
+    height: 100px;
+    width: 100%;
+    background: #DFE6ED;
+    border: 1px solid #9EADBA;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 15px 10px;   
+    display: flex; 
+}
+.footer-seats .poster{
+    height: 100%;
+    width: 20%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    padding: 5px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.footer-seats .poster img{
+    max-height: 100%;
+}
+.footer-seats .titles .title{
+    width: 100%;
+}
+.footer-seats .title{
+    width: 80%;
+    height: 50%;
+    font-size: 26px;
+    line-height: 30px;
+    color:#293845;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.success{
+    margin-top: 67px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.success .title{
+    font-size: 24px;
+    line-height: 28px;
+    color: #293845;
+}
+.success .green{
+    color: #247A6B;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.success .green strong{
+    width: 50%;
+}
+.success strong{
+    font-weight: bold;
+}
+.success .buyer{
+    margin-top: 40px;
+}
+.success .tickets{
+    margin-top: 40px;
+}
+.success .movie-session{
+    margin-top: 40px;
+}
+.success .title-strong{
+    font-size: 24px;
+    line-height: 28px;
+    color: #293845;
+    margin-bottom: 10px;
 }

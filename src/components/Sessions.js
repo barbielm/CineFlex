@@ -3,15 +3,16 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
 import Session from './Session'
-import Footer from './Footer'
+import Footer from './FooterSessions'
 
 export default function Sessions(){
     const { movieId } = useParams() 
     const [sessions, setSessions] = useState([])
     const [movie, setMovie] = useState({})
     useEffect(() => {
-        const request = axios.get(`https://mock-api.bootcamp.respondeai.com.br/api/v2/cineflex/movies/${movieId[1]}/showtimes`)
+        const request = axios.get(`https://mock-api.bootcamp.respondeai.com.br/api/v2/cineflex/movies/${movieId}/showtimes`)
         request.then((reply) => {
+            console.log(reply.data)
             const { days, title, posterURL } = reply.data
             setSessions(days)
             setMovie({title: title, posterURL: posterURL})
